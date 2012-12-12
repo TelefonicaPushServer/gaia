@@ -26,6 +26,12 @@ prefs.push(["network.http.max-connections-per-server", 15]);
 // for https://bugzilla.mozilla.org/show_bug.cgi?id=811605 to let user know what prefs is for ril debugging
 prefs.push(["ril.debugging.enabled", false]);
 
+//prefs.push(["network.push-notification.notification-server", "ws://10.95.193.161:8080"]);
+prefs.push(["network.push-notification.notification-server", "ws://192.168.43.252:8080"]);
+//prefs.push(["network.push-notification.user-agent-token-server", "http://10.95.193.161:8080/token"]);
+prefs.push(["network.push-notification.user-agent-token-server", "http://192.168.43.252:8080/token"]);
+prefs.push(["network.push-notification.receiver-port", 1234]);
+
 if (LOCAL_DOMAINS) {
   prefs.push(["network.dns.localDomains", domains.join(",")]);
 }
