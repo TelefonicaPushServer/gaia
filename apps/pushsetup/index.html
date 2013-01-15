@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>Push setup</title>
+
+    <!-- Include shared building blocks -->
+    <link rel="stylesheet" type="text/css" href="shared/style/headers.css"/>
+    <link rel="stylesheet" type="text/css" href="shared/style/buttons.css"/>
+
+    <link rel="stylesheet" href="style/push.css" type="text/css" />
+    <script type="text/javascript" src="js/push.js"></script>
+  </head>
+  <body role="application">
+    <section role="region">
+      <header>
+        <h1 data-l10n-id="push_setup">Push Setup</h1>
+      </header>
+      <section class="content">
+        <div id="currentConfig"></div>
+        <div>
+          <label for="pushIP">Server IP</label>
+          <input id="pushIP"></input>
+        </div>
+        <div>
+          <label for="pushPort">Server Port</label>
+          <input id="pushPort"></input>
+        </div>
+        <button type="button" value="" id="buttonSet" title="setup">Update</button><br />
+        <div id="logArea"></div>
+      </section>
+    </section>
+  </body>
+</html>
