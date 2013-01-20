@@ -1,11 +1,11 @@
 {
   "name": "Push Setup",
-  "description": "Push setup tool",
+  "description": "Push setup",
   "launch_path": "/index.html",
   "type": "certified",
   "developer": {
-    "name": "Fernando Rodriguez Sela",
-    "url": "https://github.com/telefonicaid/notification_server"
+    "name": "Alberto Crespell Perez",
+    "url": "https://github.com/acperez/gaia/tree/push-client"
   },
   "locales": {
     "en-US": {
