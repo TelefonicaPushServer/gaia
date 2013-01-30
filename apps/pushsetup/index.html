@@ -8,8 +8,9 @@
     <!-- Include shared building blocks -->
     <link rel="stylesheet" type="text/css" href="shared/style/headers.css"/>
     <link rel="stylesheet" type="text/css" href="shared/style/switches.css"/>
-    <link rel="stylesheet" type="text/css" href="shared/style_unstable/lists.css"/>
     <link rel="stylesheet" type="text/css" href="shared/style/input_areas.css"/>
+    <link rel="stylesheet" type="text/css" href="shared/style/buttons.css"/>
+    <link rel="stylesheet" type="text/css" href="shared/style_unstable/lists.css"/>
 
     <!-- Specific style -->
     <link href="style/app.css" rel="stylesheet">
@@ -21,10 +22,11 @@
 
   <body role="application">
     <article id="main-wrapper" class="wrapper">
-      <section id="main-view" role="region" class="panel">
+      <section id="main-view" role="region" class="mainPanel">
         <header>
           <menu type="toolbar">
-            <button id="settings-button"><span class="icon icon-settings" data-l10n-id="settings">settings</span></button>
+            <a href="#" id="apps-button"><span class="icon icon-edit">edit</span></a>
+            <a href="#" id="settings-button"><span class="icon icon-settings">settings</span></a>
           </menu>
           <h1 data-l10n-id="push_setup">Push Setup</h1>
         </header>
@@ -56,8 +58,7 @@
         </section>
       </section>
 
-      <!-- Settings view -->
-      <section role="region" class="skin-organic panel">
+      <section role="region" class="skin-organic settingsPanel">
         <header>
           <button id="cancel-settings"><span class="icon icon-close">close</span></button>
           <menu type="toolbar">
@@ -65,7 +66,6 @@
           </menu>
           <h1 data-l10n-id="settings">Settings</h1>
         </header>
-
         <header><h2>Remote server</h2></header>
         <section data-type="list" class="skin-organic">
           <ul>
@@ -103,6 +103,21 @@
             </li>
           </ul>
         </section>
+      </section>
+
+      <section role="region" class="appsPanel">
+        <header>
+          <menu type="toolbar">
+            <button id="close-edit" data-l10n-id="done">done</button>
+          </menu>
+          <h1 data-l10n-id="notifications">Notifications</h1>
+        </header>
+
+        <section data-type="list">
+          <ul id="list-view">
+          </ul>
+        </section>
+
       </section>
     </article>
   </body>

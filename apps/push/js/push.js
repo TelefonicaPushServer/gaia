@@ -14,7 +14,7 @@ var Push = {
 
   init: function() {
     debug("Init");
-    this.waurl = "http://192.168.43.252:8888";
+    this.waurl = "http://192.168.43.142:8888";
     this.watoken = null;
     this.pbk = null;
 
@@ -78,7 +78,7 @@ var Push = {
 
   requestURL: function() {
     var self = this;
-    var req = navigator.mozPush.requestURL(this.watoken, this.pbk);
+    var req = navigator.mozPush.requestRemotePermission(this.watoken, this.pbk);
 
     req.onsuccess = function(e) {
       debug("Push URL = " + req.result);

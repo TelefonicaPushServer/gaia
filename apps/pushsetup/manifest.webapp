@@ -22,6 +22,7 @@
     "120": "/style/icons/PushIcon.png"
   },
   "permissions": {
+    "webapps-manage":{},
     "settings":{ "access": "readwrite" }
   }
 }
