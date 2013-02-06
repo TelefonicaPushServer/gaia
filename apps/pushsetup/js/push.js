@@ -13,11 +13,13 @@ var Push = {
   remoteHost: null,
   remotePort: null,
   ssl: null,
+  keepAlive: null,
   localPort: null,
 
   remoteHostEdit: null,
   remotePortEdit: null,
   sslEdit: null,
+  keepAliveEdit: null,
   localPortEdit: null,
 
   apps: {},
@@ -33,11 +35,13 @@ var Push = {
     this.remoteHost = document.getElementById('remoteHost');
     this.remotePort = document.getElementById('remotePort');
     this.ssl = document.getElementById('ssl');
+    this.keepAlive = document.getElementById('keepAlive');
     this.localPort = document.getElementById('localPort');
 
     this.remoteHostEdit = document.getElementById('remoteHostIn');
     this.remotePortEdit = document.getElementById('remotePortIn');
     this.sslEdit = document.getElementById('sslIn');
+    this.keepAliveEdit = document.getElementById('keepAliveIn');
     this.localPortEdit = document.getElementById('localPortIn');
 
     this.initAppsData();
@@ -74,6 +78,7 @@ var Push = {
     this.remotePort.innerHTML = settings.port;
     this.ssl.innerHTML = settings.ssl ? "Enabled" : "Disabled";
     this.localPort.innerHTML = settings.udpPort;
+    this.keepAlive.innerHTML = settings.keepAlive;
   },
 
   showSettings: function() {
@@ -81,6 +86,7 @@ var Push = {
     this.remotePortEdit.placeholder = this.remotePort.innerHTML;
     this.sslEdit.checked = (this.ssl.innerHTML == "Enabled");
     this.localPortEdit.placeholder = this.localPort.innerHTML;
+    this.keepAliveEdit.placeholder = this.keepAlive.innerHTML;
 
     this.slideX();
   },
@@ -89,6 +95,7 @@ var Push = {
     var settings = {host: this.remoteHostEdit.value,
                     port: this.remotePortEdit.value,
                     ssl: this.sslEdit.checked,
+                    keepAlive: this.keepAliveEdit.value,
                     udpPort: this.localPortEdit.value};
 
     navigator.mozPush.setup(settings);
