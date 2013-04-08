@@ -135,7 +135,7 @@
   "7": [
     {"carrier":"Movistar MMS","apn":"telefonica.es","user":"telefonica","password":"telefonica","mmsc":"http://mms.movistar.com","mmsproxy":"10.138.255.5","mmsport":"8080","type":["mms"]},
     {"voicemail":"123","enableStrict7BitEncodingForSms":true,"type":["operatorvariant"]},
-    {"carrier":"Movistar","apn":"telefonica.es","user":"telefonica","password":"telefonica","proxy":"10.138.255.133","port":"8080","type":["default","supl"]}
+    {"carrier":"Movistar","apn":"labtme.movistar.es","user":"WAPTM","password":"WAPTM","proxy":"172.16.70.18","port":"8080","type":["default","supl"]}
   ],
   "8": [
     {"carrier":"Euskaltel MMS","apn":"euskaltelmms.euskaltel.mobi","user":"MMS","password":"EUSKALTEL","mmsc":"http://mms.euskaltel.mobi","mmsproxy":"172.16.18.74","mmsport":"8080","type":["mms"]},

@@ -7,7 +7,8 @@ function utf8_to_b64( str ) {
 var WebJabber = {
   pushURL: '',
   jid: '',
-  server: 'http://jabber.srv.openwebdevice.com/',
+  server: 'http://91.121.210.81:8083/',
+//  server: 'http://jabber.srv.openwebdevice.com/',
   _sendXMLHttpRequest: function(url, callback, errorHandler) {
     var request = new XMLHttpRequest({ mozSystem: true });
     request.open('GET', url, true);
@@ -32,7 +33,7 @@ var WebJabber = {
     request.send(null);
   },
   init: function(pushurl) {
-    console.log('Establishing the URL');
+    console.log('Establishing the URL '+pushurl);
     WebJabber.pushurl = pushurl;
   },
   connect: function(email, pwd, callback, errorHandler) {

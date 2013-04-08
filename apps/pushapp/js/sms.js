@@ -27,7 +27,7 @@ var MessageManager = {
     ThreadListUI.init();
     console.log('AFTER GETTING REGISTRATIONS');
     // Register to the push if needed 
-    if (!PushManager.getRegistrations()) {
+    // if (!PushManager.getRegistrations()) {
       console.log('I need to register!');
       var req = navigator.mozPush.requestRemotePermission(this.watoken, this.pbk);
 
@@ -39,7 +39,7 @@ var MessageManager = {
       req.onerror = function(e) {
         console.log("Error registering app: " + e);
       }
-    }
+    // }
 
     // Add listeners
     window.addEventListener('hashchange', this.onHashChange.bind(this));

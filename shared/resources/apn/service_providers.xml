@@ -3210,8 +3210,6 @@ conceived.
 				<usage type="internet"/>
 				<username>movistar</username>
 				<password>movistar</password>
-				<dns>194.179.1.100</dns>
-				<dns>194.179.1.101</dns>
 			</apn>
 		</gsm>
 	</provider>

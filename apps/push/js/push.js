@@ -14,7 +14,7 @@ var Push = {
 
   init: function() {
     debug("Init");
-    this.waurl = "http://192.168.43.142:8888";
+    this.waurl = "http://192.168.1.48:9999";
     this.watoken = null;
     this.pbk = null;
 
